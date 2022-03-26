@@ -21,8 +21,8 @@ body {
 
 img {
   margin-top: 15px;
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   border: 3px solid black;
 }
 
@@ -36,11 +36,11 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 230px;
-  min-width: 230px;
+  max-width: 350px;
+  min-width: 350px;
   border: 10px double black;
   box-shadow: 10px 10px 10px 10px rgb(0, 0, 0);
-  margin: 20px;
+  margin: 30px;
   background-color: white;
 }
 
@@ -66,8 +66,8 @@ button {
 .pictureDescription {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
 }
 
 
