@@ -8,6 +8,7 @@ function GalleryList({getGallery, galleryList}) {
                     <Picture 
                     key={picture.id}
                     picture={picture}
+                    getGallery={getGallery}
                     />
                 ))}
             </div>

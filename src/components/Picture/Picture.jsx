@@ -1,12 +1,38 @@
+import axios from "axios";
+import {useState} from 'react';
 
-function ShoppingItem({picture}) {
+function ShoppingItem({picture, getGallery }) {
+
+    let [showPicture, setShowPicture] = useState(true);
+
+    const updateLikes = (pictureId) => {
+        axios.put(`/gallery/like/${pictureId}`)
+            .then((response) => {
+                getGallery()
+            }).catch((err) => {
+                console.log('Error in PUT', err);
+            });
+    };
+
+
+    console.log(showPicture);
     return (
         <>
             <div className="pictureContainer" key={picture.id}>
-                <img src={picture.path}/>
-                <p>{picture.description}</p>
-                <p>Likes: {picture.likes}</p>
-                <button>I Love It!</button>
+                <div className="centerText" onClick={(event) => setShowPicture(!showPicture)}>
+                    {showPicture === true ? (
+                        <img src={picture.path}/>
+                    ) : (
+                        <>
+                            <span className="pictureDescription">{picture.description}</span>
+                            <img src={picture.path}/>
+                        </>
+                    )}
+                    
+                    
+                </div>
+                <h5>Likes: {picture.likes}</h5>
+                <button onClick={(event) => updateLikes(picture.id)}>I Love It!</button>
             </div>
         </>
     )

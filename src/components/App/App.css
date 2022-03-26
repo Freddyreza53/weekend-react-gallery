@@ -1,3 +1,9 @@
+body {
+  background-image: url('../../../public/images/flowerPic.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .App {
   text-align: center;
 }
@@ -31,9 +37,36 @@ img {
   align-items: center;
   max-width: 230px;
   min-width: 230px;
+  border: 10px double black;
+  box-shadow: 10px 10px 10px 10px rgb(0, 0, 0);
+  margin: 20px;
+  background-color: white;
 }
 
 p {
   word-wrap: normal;
 }
+
+span {
+  position: absolute;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin-bottom: 15px;
+  background-color: rgb(54, 47, 47);
+  color: white;
+}
+
+.pictureDescription {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  height: 200px;
+  width: 200px;
+}
+
+
 
