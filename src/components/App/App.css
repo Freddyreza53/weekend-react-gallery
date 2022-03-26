@@ -61,6 +61,7 @@ button {
   margin-bottom: 15px;
   background-color: rgb(54, 47, 47);
   color: white;
+  height: 30px;
 }
 
 .pictureDescription {
