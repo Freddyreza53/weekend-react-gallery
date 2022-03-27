@@ -24,6 +24,7 @@ function GalleryList({getGallery, galleryList}) {
                     picture={picture}
                     current={current}
                     getGallery={getGallery}
+                    galleryList={galleryList}
                     index={index}
                     />
                 ))}

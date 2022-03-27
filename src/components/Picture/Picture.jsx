@@ -1,7 +1,8 @@
 import axios from "axios";
 import {useState} from 'react';
+import GalleryList from "../GalleryList/GalleryList";
 
-function ShoppingItem({picture, index, getGallery, current }) {
+function ShoppingItem({picture, index, getGallery, galleryList, current }) {
 
     let [showPicture, setShowPicture] = useState(true);
 
@@ -32,7 +33,7 @@ function ShoppingItem({picture, index, getGallery, current }) {
                         </div>
                         <h2>Likes: {picture.likes}</h2>
                         <button onClick={(event) => updateLikes(picture.id)}>I Love It!</button>
-                        <h4>Picture: {current + 1} of 9</h4>
+                        <h4>Picture: {current + 1} of {galleryList.length}</h4>
                     </>
                 )}
             </div>
