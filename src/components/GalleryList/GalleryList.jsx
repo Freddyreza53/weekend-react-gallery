@@ -15,9 +15,8 @@ function GalleryList({getGallery, galleryList}) {
 
     return (
         <>
-            <div className="listContainer">
-            <button onClick={(event) => prevPicture()}>Prev Picture</button>
-            <button onClick={(event) => nextPicture()}>Next Picture</button>
+            <section className="listContainer">
+            <button className="slideButton" onClick={(event) => prevPicture()}>Prev Picture</button>
             
                 {galleryList.map((picture, index) => (
                     <Picture 
@@ -28,7 +27,9 @@ function GalleryList({getGallery, galleryList}) {
                     index={index}
                     />
                 ))}
-            </div>
+            
+            <button className="slideButton" onClick={(event) => nextPicture()}>Next Picture</button>
+            </section>
         </>
     )
 }

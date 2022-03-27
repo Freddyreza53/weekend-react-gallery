@@ -5,7 +5,6 @@ function ShoppingItem({picture, index, getGallery, current }) {
 
     let [showPicture, setShowPicture] = useState(true);
 
-
     const updateLikes = (pictureId) => {
         axios.put(`/gallery/like/${pictureId}`)
             .then((response) => {
@@ -15,27 +14,27 @@ function ShoppingItem({picture, index, getGallery, current }) {
             });
     };
 
-    console.log(current);
     return (
         <>
-            
-            <div className="pictureContainer" key={picture.id}>
-                
-                {index === current && (<img src={picture.path}/>)}
-                {/* <div className="centerText" onClick={(event) => setShowPicture(!showPicture)}>
-                    {showPicture === true ? (
-                        <img src={picture.path}/>
-                    ) : (
-                        <>
-                            <span className="pictureDescription">{picture.description}</span>
+            <div key={picture.id}>
+                {index === current && (
+                    <>
+                        <div className="centerText" onClick={(event) => setShowPicture(!showPicture)}>
+                        {showPicture === true ? (
                             <img src={picture.path}/>
-                        </>
-                    )}
-                    
-                    
-                </div>
-                <h5>Likes: {picture.likes}</h5>
-                <button onClick={(event) => updateLikes(picture.id)}>I Love It!</button> */}
+                        ) : (
+                            <>
+                                <span className="pictureDescription">{picture.description}</span>
+                                <img src={picture.path}/>
+                            </>
+                        )}
+                        
+                        </div>
+                        <h2>Likes: {picture.likes}</h2>
+                        <button onClick={(event) => updateLikes(picture.id)}>I Love It!</button>
+                        <h4>Picture: {current + 1} of 9</h4>
+                    </>
+                )}
             </div>
         </>
     )
