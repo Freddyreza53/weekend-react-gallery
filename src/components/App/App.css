@@ -19,22 +19,30 @@ body {
   font-size: 1.5em;
 }
 
-.listContainer {
+
+main{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  margin: 50px;
 }
 
-.pictureContainer {
+img {
+  margin-top: 15px;
+  height: 400px;
+  width: 500px;
+  border: 3px solid black;
+}
+
+.listContainer {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  max-width: 350px;
-  min-width: 350px;
   border: 10px double black;
-  box-shadow: 10px 10px 10px 10px rgb(0, 0, 0, 0.7);
-  margin: 30px;
+  max-width: 700px;
+  min-width: 600px;
   background-color: white;
+  box-shadow: 10px 10px 10px 10px rgb(0, 0, 0, 0.7);
 }
 
 p {
@@ -58,17 +66,23 @@ span {
 }
 
 button {
-  margin-bottom: 15px;
+  margin: 15px;
   background-color: rgb(54, 47, 47);
   color: white;
-  height: 30px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.slideButton {
+  background-color: rgba(148, 141, 141, 0.267);
+  color: black;
 }
 
 .pictureDescription {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
-  height: 300px;
-  width: 300px;
+  height: 400px;
+  width: 500px;
 }
 
 
