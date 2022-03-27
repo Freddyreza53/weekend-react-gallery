@@ -1,9 +1,10 @@
 import axios from "axios";
 import {useState} from 'react';
 
-function ShoppingItem({picture, getGallery }) {
+function ShoppingItem({picture, index, getGallery, current }) {
 
     let [showPicture, setShowPicture] = useState(true);
+
 
     const updateLikes = (pictureId) => {
         axios.put(`/gallery/like/${pictureId}`)
@@ -14,12 +15,14 @@ function ShoppingItem({picture, getGallery }) {
             });
     };
 
-
-    console.log(showPicture);
+    console.log(current);
     return (
         <>
+            
             <div className="pictureContainer" key={picture.id}>
-                <div className="centerText" onClick={(event) => setShowPicture(!showPicture)}>
+                
+                {index === current && (<img src={picture.path}/>)}
+                {/* <div className="centerText" onClick={(event) => setShowPicture(!showPicture)}>
                     {showPicture === true ? (
                         <img src={picture.path}/>
                     ) : (
@@ -32,7 +35,7 @@ function ShoppingItem({picture, getGallery }) {
                     
                 </div>
                 <h5>Likes: {picture.likes}</h5>
-                <button onClick={(event) => updateLikes(picture.id)}>I Love It!</button>
+                <button onClick={(event) => updateLikes(picture.id)}>I Love It!</button> */}
             </div>
         </>
     )
